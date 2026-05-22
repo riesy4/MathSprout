@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- DrawView canvas -->
+    <com.example.mathsprout.DrawView
+        android:id="@+id/drawView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"/>
+
+    <!-- Color palette -->
+    <LinearLayout
+        android:id="@+id/colorPalette"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <Button android:id="@+id/redBtn" android:layout_width="50dp" android:layout_height="50dp" android:background="#F44336"/>
+        <Button android:id="@+id/blueBtn" android:layout_width="50dp" android:layout_height="50dp" android:background="#2196F3"/>
+        <Button android:id="@+id/greenBtn" android:layout_width="50dp" android:layout_height="50dp" android:background="#4CAF50"/>
+        <Button android:id="@+id/blackBtn" android:layout_width="50dp" android:layout_height="50dp" android:background="#000000"/>
+    </LinearLayout>
+
+    <!-- Clear button -->
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+</RelativeLayout>

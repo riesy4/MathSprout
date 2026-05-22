@@ -1,0 +1,14 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8C9">
+
+  <TextView
+      android:id="@+id/lessonTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Lesson"
+      android:textColor="@android:color/black"
+      android:textSize="24sp"
+      android:layout_centerInParent="true"/>
+</RelativeLayout>

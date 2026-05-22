@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <com.example.mathsprout.WhiteboardView
+        android:id="@+id/whiteboardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/endSessionBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="End"
+        android:backgroundTint="#FF5252"
+        android:textColor="#FFFFFF" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/qrPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/sessionCodeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MS-XXXX"
+                android:textColor="#368458"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/qrImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="#FFF8C9"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:id="@+id/floatingToolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <View android:id="@+id/e_colorBlack" android:layout_width="24dp" android:layout_height="24dp" android:layout_margin="4dp" android:background="#000000" />
+            <View android:id="@+id/e_colorRed" android:layout_width="24dp" android:layout_height="24dp" android:layout_margin="4dp" android:background="#F44336" />
+            <View android:id="@+id/e_colorBlue" android:layout_width="24dp" android:layout_height="24dp" android:layout_margin="4dp" android:background="#2196F3" />
+
+            <SeekBar
+                android:id="@+id/e_widthSeek"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:max="20"
+                android:progress="5" />
+
+            <ImageButton
+                android:id="@+id/e_undoBtn"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_revert" />
+
+            <ImageButton
+                android:id="@+id/e_clearBtn"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_delete" />
+
+            <Button android:id="@+id/showQrBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="QR"
+                android:textSize="10sp"
+                android:backgroundTint="#368458" />
+
+            <Button android:id="@+id/allowChildBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Allow Kids"
+                android:textSize="10sp"
+                android:backgroundTint="#A5D067"
+                android:textColor="#368458" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
