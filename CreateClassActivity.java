@@ -23,7 +23,7 @@ public class CreateClassActivity extends AppCompatActivity {
     private Button createBtn;
     private TextView codeTv;
     private ImageView qrImage;
-    private LinearLayout resultLayout; // New container for visibility
+    private LinearLayout resultLayout; 
 
     private DatabaseReference classesRef, usersRef;
     private FirebaseAuth auth;
@@ -33,7 +33,7 @@ public class CreateClassActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_class);
 
-        // Bind UI
+        
         classTitleLayout = findViewById(R.id.classTitleLayout);
         classTitleEt = findViewById(R.id.classTitleEt);
         createBtn = findViewById(R.id.createClassBtn);
@@ -59,7 +59,7 @@ public class CreateClassActivity extends AppCompatActivity {
             return;
         }
 
-        // Generate unique code
+      
         String classCode = "MS-" + UUID.randomUUID().toString().substring(0,6).toUpperCase();
         String educatorUid = auth.getCurrentUser() != null ? auth.getCurrentUser().getUid() : "unknown";
 
@@ -69,19 +69,19 @@ public class CreateClassActivity extends AppCompatActivity {
         classObj.put("educatorUid", educatorUid);
         classObj.put("timestamp", System.currentTimeMillis());
 
-        createBtn.setEnabled(false); // Prevent double clicks
+        createBtn.setEnabled(false); 
 
         classesRef.child(classCode).setValue(classObj)
                 .addOnSuccessListener(aVoid -> {
                     codeTv.setText(classCode);
                     generateQr(classCode);
 
-                    // Update UI visibility
+                
                     resultLayout.setVisibility(View.VISIBLE);
                     createBtn.setEnabled(true);
                     createBtn.setText("Class Created!");
 
-                    // Save classCode under educator’s profile
+                  
                     usersRef.child(educatorUid).child("classCode").setValue(classCode);
 
                     Toast.makeText(this, "Class successfully established!", Toast.LENGTH_SHORT).show();
