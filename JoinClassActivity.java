@@ -34,7 +34,6 @@ public class JoinClassActivity extends AppCompatActivity {
 
         joinBtn.setOnClickListener(v -> joinClass());
         scanQrBtn.setOnClickListener(v -> {
-            // Use ZXing IntentIntegrator for QR scanning
             new com.google.zxing.integration.android.IntentIntegrator(this)
                     .setPrompt("Scan Class QR Code")
                     .setBeepEnabled(true)
