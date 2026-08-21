@@ -13,7 +13,6 @@ public class PerformanceItem {
         this.percentage = percentage;
     }
 
-    // Getters
     public String getChildUid() { return childUid; }
     public int getScore() { return score; }
     public int getTotal() { return total; }
