@@ -73,13 +73,12 @@ public class ChildQuizActivity extends AppCompatActivity {
             if (currentIndex < quizList.size()) {
                 showQuestion();
             } else {
-                // Quiz Finished
+         
                 QuizWrongHolder.wrongList = wrongAnswers;
 
-                // Save attempt to Firebase
+           
                 saveQuizAttempt(score, stars, "Mixed Arithmetic Quiz");
 
-                // Navigate to Results
                 Intent intent = new Intent(this, ChildQuizResultActivity.class);
                 intent.putExtra("score", score);
                 intent.putExtra("stars", stars);
@@ -130,11 +129,11 @@ public class ChildQuizActivity extends AppCompatActivity {
             int correct;
 
             switch (operation) {
-                case 0: // Addition
+                case 0: 
                     question = a + " + " + b + " = ?";
                     correct = a + b;
                     break;
-                case 1: // Subtraction
+                case 1: 
                     question = a + " - " + b + " = ?";
                     correct = a - b;
                     break;
