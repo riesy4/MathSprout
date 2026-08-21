@@ -10,7 +10,6 @@ public class Question {
     private String category;
     private String imageUrl;
 
-    // Required for Firebase
     public Question() {}
 
     public Question(String questionText, String optionA, String optionB,
@@ -25,7 +24,7 @@ public class Question {
         this.imageUrl = imageUrl;
     }
 
-    // -------- Getters --------
+   
 
     public String getQuestionText() {
         return questionText;
