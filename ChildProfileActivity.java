@@ -42,11 +42,10 @@ public class ChildProfileActivity extends AppCompatActivity {
 
         quizHistoryList = new ArrayList<>();
         adapter = new QuizHistoryAdapter(this, quizHistoryList, record -> {
-            // Handle review button click
             Toast.makeText(ChildProfileActivity.this,
                     "Reviewing quiz: Score " + record.score + " Stars " + record.stars,
                     Toast.LENGTH_SHORT).show();
-            // Here you can open a new Activity to show wrong answers
+          
         });
 
         quizRecyclerView.setLayoutManager(new LinearLayoutManager(this));
