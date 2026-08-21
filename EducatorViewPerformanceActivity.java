@@ -79,7 +79,7 @@ public class EducatorViewPerformanceActivity extends AppCompatActivity {
                     fullList.add(student);
                     fetchStats(student);
                 }
-                filter(""); // Initial load
+                filter(""); 
             }
             @Override public void onCancelled(@NonNull DatabaseError e) {}
         });
@@ -105,7 +105,7 @@ public class EducatorViewPerformanceActivity extends AppCompatActivity {
         LinearLayout container = v.findViewById(R.id.detailsContainer);
         titleTv.setText(student.name + "'s Progress");
 
-        // Map IDs to Titles
+        
         lessonsRef.child(student.uid).child("activeLessons").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot activeSnap) {
@@ -135,7 +135,7 @@ public class EducatorViewPerformanceActivity extends AppCompatActivity {
         new AlertDialog.Builder(this).setView(v).setPositiveButton("Close", null).show();
     }
 
-    // --- Inner Classes ---
+  
 
     static class StudentPerformance {
         String uid, name;
