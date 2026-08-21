@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ServerValue; // Added for timestamp
+import com.google.firebase.database.ServerValue;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
@@ -33,7 +33,7 @@ public class AnswerLessonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer_lesson);
 
-        // Bind UI
+
         questionTv = findViewById(R.id.questionTv);
         progressTv = findViewById(R.id.progressTv);
         optionsGroup = findViewById(R.id.optionsGroup);
