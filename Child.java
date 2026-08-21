@@ -3,12 +3,7 @@ package com.example.mathsprout;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-/**
- * Child model
- * - Firebase compatible (empty constructor)
- * - Parcelable (for Intent passing)
- * - Supports 2-arg and 3-arg constructors
- */
+
 public class Child implements Parcelable {
 
     private String uid;
@@ -16,12 +11,10 @@ public class Child implements Parcelable {
     private String email;
     private boolean selected;
 
-    // Required empty constructor for Firebase
     public Child() {
         this.selected = false;
     }
 
-    // Used when only uid + email are known
     public Child(String uid, String email) {
         this.uid = uid;
         this.email = email;
@@ -29,7 +22,7 @@ public class Child implements Parcelable {
         this.selected = false;
     }
 
-    // Used when uid + name + email are known
+
     public Child(String uid, String name, String email) {
         this.uid = uid;
         this.name = name;
@@ -37,7 +30,7 @@ public class Child implements Parcelable {
         this.selected = false;
     }
 
-    // Parcelable constructor
+ 
     protected Child(Parcel in) {
         uid = in.readString();
         name = in.readString();
@@ -57,7 +50,7 @@ public class Child implements Parcelable {
         }
     };
 
-    // -------- Getters --------
+
 
     public String getUid() {
         return uid;
@@ -75,7 +68,7 @@ public class Child implements Parcelable {
         return selected;
     }
 
-    // -------- Setters --------
+  
 
     public void setUid(String uid) {
         this.uid = uid;
@@ -93,7 +86,6 @@ public class Child implements Parcelable {
         this.selected = selected;
     }
 
-    // -------- Parcelable --------
 
     @Override
     public int describeContents() {
